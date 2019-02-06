@@ -1,3 +1,5 @@
 #ignore the docs
 /docs/
 
+#ignore the unnomarlized schema
+/schema/BreakPointBarNormalizedSchema.txt
