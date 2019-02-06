@@ -1,0 +1,54 @@
+DEPARTMENT
+	departmentId SERIAL PK
+	departmentName VARCHAR(20) NOT NULL
+	description VARCHAR 
+
+EMPLOYEE
+	employeeId SERIAL PK
+	firstName VARCHAR(20) NOT NULL
+	middleName VARCHAR(20) 
+	lastname VARCHAR(20) NOT NULL
+	phoneNumber VARCHAR(17) 
+	address VARCHAR(20) 
+	department INT FK
+	manager INT FK
+
+PRODUCT
+	productId SERIAL PK
+	productName VARCHAR(20) NOT NULL
+	price INT NOT NULL
+	department INT FK
+
+STOCK
+	product INT PK FK
+	stockAvailableForSale INT NOT NULL
+	deplicities INT NOT NULL
+
+EXPENDITURE
+	expenditureId SERIAL PK
+	expenditureName VARCHAR(20) NOT NULL
+	cost INT NOT NULL
+	date DATE NOT NULL
+	departement INT FK
+
+SUPPLIER
+	supplierName VARCHAR(20) PK
+	phoneNumber VARCHAR(17) 
+	address VARCHAR(20)
+
+SALE 
+	saleID SERIAL PK
+	saleDate DATE NOT NULL
+	quantitySold INT NOT NULL
+	product INT FK
+	employee INT FK
+
+PURCHASE 
+	purchaseID SERIAL PK
+	purchaseDate DATE NOT NULL
+	quantityPurchased INT NOT NULL
+	product INT FK
+	supplier INT FK
+
+
+
